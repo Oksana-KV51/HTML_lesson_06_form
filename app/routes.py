@@ -12,7 +12,7 @@ def index():
         content = request.form.get('content')
         #создаёт условие для проверки наличия данных в полях title и content
         if title and content:
-        posts.append({'title': title, 'content': content})
+            posts.append({'title': title, 'content': content})
         #использует для обновления страницы и предотвращения повторной отправки формы.
         return redirect(url_for('index'))
         #возвращает отрендеренный шаблон с переданными данными постов
